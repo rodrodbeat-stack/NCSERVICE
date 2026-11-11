@@ -1,8 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700">
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#020b16"/><stop offset=".55" stop-color="#062844"/><stop offset="1" stop-color="#0879a8"/></linearGradient><radialGradient id="glow"><stop stop-color="#31d5ff" stop-opacity=".5"/><stop offset="1" stop-color="#0879a8" stop-opacity="0"/></radialGradient><linearGradient id="metal" x2=".9" y2="1"><stop stop-color="#fff"/><stop offset=".4" stop-color="#8daebf"/><stop offset=".7" stop-color="#e7f7ff"/><stop offset="1" stop-color="#4a829f"/></linearGradient><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#5bdcff" opacity=".42"/></pattern></defs>
-<rect width="1600" height="700" fill="url(#bg)"/><ellipse cx="1220" cy="340" rx="500" ry="410" fill="url(#glow)"/><rect width="1600" height="700" fill="url(#dots)" opacity=".3"/>
-<g fill="none" stroke="#35cfff" stroke-width="2" opacity=".3"><path d="M740 80Q1040-30 1340 170T1590 540M700 150Q1020 40 1320 230T1570 610M720 610Q1000 430 1240 500T1580 360"/><circle cx="1230" cy="340" r="210"/><circle cx="1230" cy="340" r="260"/><circle cx="1230" cy="340" r="310"/></g>
-<g fill="#54c8ee" opacity=".16" stroke="#57d9ff" stroke-width="1.5"><path d="M880 185l45-36 68 9 28 34-23 22-13 42-42 14-18 42-35-9-22-52-36-14 10-39z"/><path d="M1035 335l42 13 26 53-14 65-34 60-29-38 8-60-25-42z"/><path d="M1190 160l56-34 79 18 43 43-31 34-65-7-32 33-54-27z"/><path d="M1290 315l72-29 82 31 22 58-42 31-67-13-49-34z"/><path d="M1440 520l55-16 42 29-21 39-65 3-32-25z"/></g>
-<g fill="none" stroke="#43d5ff" stroke-width="2" opacity=".45"><path d="M910 220L1110 170 1270 245 1450 215M980 400L1120 470 1290 410 1470 480M1110 170L1120 470M1270 245L1290 410M910 220L980 400"/></g>
-<g transform="translate(1220 345)"><circle r="130" fill="#031626" fill-opacity=".45" stroke="#59dfff" stroke-width="3"/><circle r="108" fill="none" stroke="#bceeff" stroke-opacity=".65" stroke-width="2"/><ellipse rx="152" ry="48" fill="none" stroke="#31cfff" stroke-width="5" transform="rotate(-28)"/><path d="M-48 60V-52L0 5 48-52V60" fill="none" stroke="url(#metal)" stroke-width="19" stroke-linecap="square" stroke-linejoin="miter"/><g fill="url(#metal)"><circle cx="-48" cy="-72" r="13"/><circle cy="-91" r="15"/><circle cx="48" cy="-72" r="13"/></g><path d="M-76 54q28-49 56 0M-26 38q26-62 52 0M20 54q28-49 56 0" fill="none" stroke="#bfeeff" stroke-width="12" stroke-linecap="round"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#063b60"/><stop offset=".36" stop-color="#031b30"/><stop offset="1" stop-color="#010b17"/></linearGradient>
+ <linearGradient id="chrome" x1="0" y1="0" x2=".15" y2="1"><stop stop-color="#fff"/><stop offset=".24" stop-color="#a9c8d8"/><stop offset=".48" stop-color="#f7ffff"/><stop offset=".72" stop-color="#648da5"/><stop offset="1" stop-color="#e9f8ff"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0875b9"/><stop offset=".45" stop-color="#1bcfff"/><stop offset="1" stop-color="#007dbb"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#0876a9" stop-opacity=".45"/><stop offset="1" stop-color="#00101f" stop-opacity="0"/></radialGradient>
+ <pattern id="mapdots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.7" fill="#48b8e5" opacity=".38"/></pattern>
+ <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1536" height="1024" fill="url(#bg)"/><ellipse cx="870" cy="270" rx="900" ry="420" fill="url(#halo)"/>
+<path d="M0 0H218L0 260ZM1536 520V1024H1315Z" fill="#061c30" stroke="#168cc4" stroke-width="3"/><path d="M0 0L215 0 0 270M1536 520L1310 1024" fill="none" stroke="#29cfff" stroke-width="3" opacity=".8"/>
+<!-- dotted world map -->
+<g opacity=".8"><path fill="url(#mapdots)" d="M275 100l70-35 65 20 35 45-26 35-72 8-20 40-68-5-36-42 15-46zM500 95l60-42 95 15 38 40-18 42-66 15-25 55-52-16-15-50-48-10zM700 135l82-50 100 16 44 40-26 46-80 10-40 48-56-20-42-44zM930 90l80-38 110 18 70 48-35 52-87 3-40 38-80-22-34-50zM1150 185l95-40 110 35 48 62-44 45-91-8-55 32-63-48zM360 280l55-35 78 20 25 60-44 48-68-10-45-37zM690 300l78-36 90 30 36 70-45 65-78-14-45-52zM1020 340l90-30 90 34 34 62-55 50-93-15-53-44z"/></g>
+<!-- network arcs -->
+<g fill="none" stroke="#26c9ff" stroke-width="2" opacity=".65" filter="url(#glow)"><path d="M560 160Q820 -35 1090 110T1490 165"/><path d="M650 260Q900 25 1210 250T1510 420"/><path d="M760 80Q1020 300 1330 100T1530 210"/><path d="M920 70Q790 300 1040 420T1460 500"/></g>
+<g fill="#70e5ff" filter="url(#glow)"><circle cx="560" cy="160" r="4"/><circle cx="880" cy="84" r="4"/><circle cx="1090" cy="110" r="4"/><circle cx="1210" cy="250" r="4"/><circle cx="1330" cy="100" r="4"/><circle cx="1490" cy="165" r="4"/></g>
+<!-- emblem -->
+<g transform="translate(290 390)">
+ <ellipse cx="0" cy="0" rx="242" ry="104" transform="rotate(-28)" fill="none" stroke="#00101d" stroke-width="34"/>
+ <ellipse cx="0" cy="0" rx="242" ry="104" transform="rotate(-28)" fill="none" stroke="url(#cyan)" stroke-width="18"/>
+ <path d="M-165 132L-70 -112Q-60 -138 -38 -138H-5L-82 100H-30L-7 132Z" fill="url(#chrome)" stroke="#d7f5ff" stroke-width="3"/>
+ <path d="M12 -138H66V-25L15 35Z" fill="url(#chrome)" stroke="#d7f5ff" stroke-width="2"/>
+ <path d="M67 130L18 85 65 28 115 130Z" fill="url(#chrome)" opacity=".9"/>
+ <g fill="url(#chrome)"><circle cx="-55" cy="20" r="19"/><circle cx="0" cy="-2" r="23"/><circle cx="58" cy="20" r="19"/></g>
+ <g fill="none" stroke="url(#chrome)" stroke-width="17" stroke-linecap="round"><path d="M-89 106Q-80 45 -55 47Q-28 50 -20 106"/><path d="M-37 115Q-28 35 0 34Q28 35 37 115"/><path d="M20 106Q28 45 58 47Q82 48 91 106"/></g>
+</g>
+<!-- wordmark -->
+<text x="565" y="405" font-family="Arial,Helvetica,sans-serif" font-size="138" font-weight="800" letter-spacing="1" fill="url(#chrome)" stroke="#d9f6ff" stroke-width="1">NCSERVICE</text>
+<text x="1440" y="322" font-family="Arial,sans-serif" font-size="36" fill="#eaf8ff">®</text>
+<text x="570" y="472" font-family="Arial,Helvetica,sans-serif" font-size="38" letter-spacing="13" fill="#e9f5fc">HUMAN CAPITAL MANAGEMENT</text>
+<path d="M570 508H1450" stroke="url(#cyan)" stroke-width="3" filter="url(#glow)"/>
+<text x="770" y="610" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="48" font-style="italic" fill="#f5f8fb">Gestionamos personas,</text>
+<text x="770" y="670" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="52" font-style="italic" font-weight="700" fill="#18bdf2">impulsamos tu negocio</text>
+<!-- services strip -->
+<g font-family="Arial,Helvetica,sans-serif" font-size="25" fill="#f1f7fb">
+ <g transform="translate(70 790)"><circle cx="30" cy="-14" r="13" fill="none" stroke="#fff" stroke-width="3"/><circle cx="72" cy="-14" r="13" fill="none" stroke="#fff" stroke-width="3"/><path d="M4 35Q7 0 30 4Q53 0 56 35M46 35Q49 0 72 4Q95 0 98 35" fill="none" stroke="#fff" stroke-width="3"/><text x="120" y="4">Reclutamiento</text><text x="120" y="37">y Selección</text></g>
+ <path d="M390 752V840" stroke="#d9f5ff" stroke-width="2"/>
+ <g transform="translate(430 780)"><path d="M0 0H43L57 14V57H0Z M43 0V14H57 M10 24H44M10 37H44M10 49H34" fill="none" stroke="#fff" stroke-width="3"/><text x="82" y="4">Contratación y</text><text x="82" y="37">Administración</text></g>
+ <path d="M735 752V840" stroke="#d9f5ff" stroke-width="2"/>
+ <g transform="translate(785 782)"><ellipse cx="25" cy="7" rx="24" ry="9" fill="none" stroke="#fff" stroke-width="3"/><path d="M1 7V42Q25 58 49 42V7M1 24Q25 40 49 24" fill="none" stroke="#fff" stroke-width="3"/><text x="82" y="4">Remuneraciones</text><text x="82" y="37">y Beneficios</text></g>
+ <path d="M1120 752V840" stroke="#d9f5ff" stroke-width="2"/>
+ <g transform="translate(1165 780)"><path d="M0 18L16 0 34 13 48 0 68 18 53 39 39 30 28 43 14 31Z" fill="none" stroke="#fff" stroke-width="3"/><text x="105" y="4">Soporte y</text><text x="105" y="37">Gestión Laboral</text></g>
+</g>
+<path d="M50 925H254M1280 925H1485" stroke="#1bcfff" stroke-width="3"/>
+<text x="768" y="938" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="25" letter-spacing="9" fill="#e9f5fc">TU SOCIO ESTRATÉGICO EN GESTIÓN DE TALENTO</text>
 </svg>
