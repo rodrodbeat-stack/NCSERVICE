@@ -118,3 +118,14 @@ body.reference-home .reference-hotspots a.hotspot:focus-visible{outline:3px soli
 body.reference-home .reference-stage{isolation:isolate}
 body:not(.reference-home) .links a{cursor:pointer;position:relative;z-index:2}
 body:not(.reference-home) .nav-cta,body:not(.reference-home) .button{cursor:pointer}
+
+/* Menú HTML real superpuesto: destinos navegables visibles y accesibles */
+body.reference-home .real-menu{z-index:99999!important}
+body.reference-home .real-menu-links{position:absolute;z-index:100000;left:33.1%;top:1.1%;width:40.8%;height:5.9%;display:flex;align-items:stretch;justify-content:stretch;pointer-events:auto;background:rgba(2,18,36,.25);border-radius:8px}
+body.reference-home .real-menu-links a{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;color:#f4fbff!important;text-decoration:none!important;font:700 clamp(9px,1.05vw,15px)/1 Arial,sans-serif;white-space:nowrap;pointer-events:auto!important;cursor:pointer!important;border-right:1px solid rgba(130,220,255,.2);text-shadow:0 1px 4px #001}
+body.reference-home .real-menu-links a:last-child{border:0}
+body.reference-home .real-menu-links a:hover,body.reference-home .real-menu-links a:focus-visible{background:rgba(0,158,235,.72);outline:2px solid #9ceaff;border-radius:5px}
+body.reference-home .reference-image{z-index:0;pointer-events:none}
+body.reference-home .reference-hotspots{z-index:99999!important;pointer-events:none!important}
+body.reference-home .reference-hotspots a.hotspot{z-index:100001!important;pointer-events:auto!important;cursor:pointer!important}
+@media(max-width:520px){body.reference-home .real-menu-links{left:24%;top:0;width:75%;height:8%;background:rgba(1,15,30,.92);flex-wrap:wrap;border:1px solid #26c9ff}body.reference-home .real-menu-links a{font-size:10px;min-width:20%;gap:2px}}
