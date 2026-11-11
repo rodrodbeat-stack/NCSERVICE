@@ -25,3 +25,16 @@ footer{background:#010b14;border-top:1px solid var(--line);padding:26px 0;color:
 .tile:hover{transform:translateY(-4px);border-color:rgba(65,211,255,.75);box-shadow:0 14px 30px rgba(0,0,0,.3),0 0 20px rgba(22,201,255,.1)}
 @media(max-width:760px){.banner{background-position:62% center;background-image:linear-gradient(90deg,rgba(2,11,22,.96),rgba(3,24,42,.76)),url("ncservice-hero.svg")}}
 @media(max-width:480px){.banner{background-position:60% center}}
+
+/* Brand reference alignment: NCSERVICE global corporate identity */
+:root{--cyan:#16c5f4;--line:rgba(45,180,235,.28)}
+body{background:radial-gradient(ellipse at 15% 0%,#0a3c60 0,transparent 38%),linear-gradient(145deg,#010b16,#031b2d 58%,#010914)}
+.brand{letter-spacing:2px}
+.brand-mark{background:linear-gradient(145deg,#f8ffff 0%,#8caebf 38%,#087bb5 72%,#031b30 100%);border:2px solid #9ceaff;box-shadow:0 0 20px #16bdf088,inset 0 0 12px #fff9}
+.banner{background-image:linear-gradient(90deg,rgba(2,12,23,.97),rgba(3,25,43,.78)),url("ncservice-hero.svg");background-size:cover;background-position:center 38%}
+.banner:after{display:none}
+.hero-art{display:block;width:100%;height:auto;border:1px solid rgba(57,201,255,.65);box-shadow:0 20px 55px #0009,0 0 28px #0baee522;margin-bottom:20px}
+.home-intro{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:25px 30px}
+.home-intro h1{margin:0 0 8px;font-size:clamp(25px,3vw,36px);color:#f3faff}
+.home-intro p{margin:0;color:#b8ccda;line-height:1.8;max-width:760px}
+@media(max-width:760px){.home-intro{display:block;padding:22px}.home-intro .button{margin-top:17px}.banner{background-position:58% center}}
