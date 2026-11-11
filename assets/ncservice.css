@@ -56,3 +56,54 @@ body{background:radial-gradient(ellipse at 15% 0%,#0a3c60 0,transparent 38%),lin
 .photo-banner .banner-content{position:relative;z-index:1;max-width:650px}.photo-banner h1{font-size:clamp(30px,4vw,48px);line-height:1.1;color:#f4faff;margin:14px 0;text-shadow:0 3px 20px #000}.photo-banner p{font-size:15px;line-height:1.8;color:#d8eaf5;max-width:560px}
 .people-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;margin:22px 0 28px;border:1px solid rgba(45,180,235,.4);background:linear-gradient(120deg,#05243b,#031323);box-shadow:0 15px 35px #0006}.people-feature img{width:100%;height:260px;object-fit:cover;display:block}.people-feature div{padding:30px;display:flex;flex-direction:column;justify-content:center}.people-feature small{font-weight:800;letter-spacing:2px;color:#1bcfff}.people-feature h2{font-size:25px;color:#f4faff;margin:12px 0}.people-feature p{line-height:1.8;color:#b8cbd9;margin:0}
 @media(max-width:760px){.photo-banner{min-height:340px;padding:34px 24px;background-position:60% center}.people-feature{grid-template-columns:1fr}.people-feature img{height:210px}.people-feature div{padding:23px}}
+
+/* HOMEPAGE: reproducción 1:1 de la referencia aprobada */
+body.reference-home{background:#020d1c;margin:0;padding:0;min-height:100vh;overflow-x:hidden}
+.reference-stage{position:relative;width:100%;max-width:1536px;margin:0 auto;line-height:0;isolation:isolate}
+.reference-image{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.reference-hotspots{position:absolute;inset:0;line-height:normal;pointer-events:none}
+.reference-hotspots .hotspot{position:absolute;display:block;pointer-events:auto;background:transparent;border:0;outline:0;cursor:pointer}
+.reference-hotspots .hotspot:focus-visible{outline:2px solid #9beeff;outline-offset:2px;border-radius:8px;background:#16c9ff22}
+.logo-hit{left:5.5%;top:1%;width:26%;height:7%}
+.nav-home{left:33.2%;top:1%;width:7.2%;height:6.2%}
+.nav-about{left:40.5%;top:1%;width:8.5%;height:6.2%}
+.nav-services{left:49%;top:1%;width:8.8%;height:6.2%}
+.nav-business{left:57.8%;top:1%;width:8.8%;height:6.2%}
+.nav-contact{left:66.6%;top:1%;width:7.8%;height:6.2%}
+.nav-cta-hit{right:1.5%;top:1%;width:12%;height:6.5%}
+.hero-prev{left:1%;top:24%;width:3%;height:5%}
+.hero-next{right:1%;top:24%;width:3%;height:5%}
+.hero-services-cta{left:8%;top:41%;width:17%;height:5%}
+.service-one{left:3%;top:46.5%;width:24%;height:8.3%}
+.service-two{left:27.5%;top:46.5%;width:24%;height:8.3%}
+.service-three{left:52%;top:46.5%;width:23%;height:8.3%}
+.service-four{left:75.5%;top:46.5%;width:23%;height:8.3%}
+.commitment-cta{left:3%;top:71%;width:20%;height:5%}
+.video-hit{left:73.5%;top:57%;width:24%;height:19%}
+.social-linkedin{left:1.5%;top:80%;width:3.5%;height:5%}
+.social-youtube{left:5.1%;top:80%;width:3.5%;height:5%}
+.social-web{left:8.8%;top:80%;width:3.5%;height:5%}
+.footer-contact{right:1.5%;top:80%;width:10%;height:5%}
+@media(max-width:700px){
+ .reference-stage{width:100%;overflow:hidden}
+ .reference-image{width:100%;height:auto}
+ .reference-hotspots .hotspot:active{background:#16c9ff30}
+}
+@media(prefers-reduced-motion:no-preference){
+ .reference-hotspots .hotspot{transition:background .16s ease,outline-color .16s ease}
+ .reference-hotspots .hotspot:hover{background:rgba(22,201,255,.07)}
+}
+/* Páginas interiores: identidad compartida con el inicio */
+body:not(.reference-home) header{background:rgba(1,12,25,.97);border-bottom:1px solid rgba(37,188,245,.55)}
+body:not(.reference-home) .brand-mark{border-radius:50%;background:linear-gradient(145deg,#f7ffff,#91b8cc 38%,#087bb5 72%,#031b30);border:2px solid #9ceaff;box-shadow:0 0 18px #16bdf088}
+body:not(.reference-home) .photo-banner{min-height:350px;position:relative;display:flex;align-items:center;overflow:hidden;border:1px solid #18bff5;background-image:linear-gradient(90deg,rgba(1,12,25,.94),rgba(2,27,47,.68) 56%,rgba(1,12,25,.15)),var(--banner-photo);background-size:cover;background-position:center;box-shadow:0 16px 45px #0008}
+body:not(.reference-home) .photo-banner:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 44px,rgba(68,203,255,.045) 45px),linear-gradient(90deg,transparent 60%,rgba(15,174,232,.08))}
+body:not(.reference-home) .photo-banner .banner-content{position:relative;z-index:1;padding:42px clamp(24px,6vw,76px);max-width:760px}
+body:not(.reference-home) .photo-banner h1{font-size:clamp(32px,4vw,52px);line-height:1.08;color:#f4fbff;text-shadow:0 3px 20px #000}
+body:not(.reference-home) .photo-banner p{font-size:15px;line-height:1.8;color:#d6eaf6;max-width:620px}
+body:not(.reference-home) .people-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;margin:24px 0;padding:18px;background:linear-gradient(120deg,#04182b,#062b47);border:1px solid rgba(45,180,235,.38)}
+body:not(.reference-home) .people-feature img{width:100%;height:260px;object-fit:cover;display:block}
+body:not(.reference-home) .people-feature h2{color:#f4fbff;font-size:26px}
+body:not(.reference-home) .people-feature p{color:#b9ccda;line-height:1.8}
+body:not(.reference-home) .tile-photo{width:calc(100% + 46px);height:155px;object-fit:cover;margin:-23px -23px 18px;display:block}
+@media(max-width:760px){body:not(.reference-home) .photo-banner{min-height:300px}body:not(.reference-home) .people-feature{grid-template-columns:1fr}body:not(.reference-home) .people-feature img{height:210px}}
