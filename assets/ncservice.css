@@ -129,3 +129,64 @@ body.reference-home .reference-image{z-index:0;pointer-events:none}
 body.reference-home .reference-hotspots{z-index:99999!important;pointer-events:none!important}
 body.reference-home .reference-hotspots a.hotspot{z-index:100001!important;pointer-events:auto!important;cursor:pointer!important}
 @media(max-width:520px){body.reference-home .real-menu-links{left:24%;top:0;width:75%;height:8%;background:rgba(1,15,30,.92);flex-wrap:wrap;border:1px solid #26c9ff}body.reference-home .real-menu-links a{font-size:10px;min-width:20%;gap:2px}}
+
+
+/* NCSERVICE · capa interactiva profesional sobre la portada original */
+body.reference-home .reference-hotspots a.hotspot{
+  border:1px solid rgba(72,218,255,.0)!important;
+  border-radius:10px;
+  background:transparent!important;
+  transition:background .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+body.reference-home .reference-hotspots a.hotspot::before{
+  content:"";
+  position:absolute;
+  top:9px;left:9px;
+  width:10px;height:10px;border-radius:50%;
+  background:#31d5ff;
+  border:2px solid #e8fbff;
+  box-shadow:0 0 0 4px rgba(22,201,255,.2),0 0 15px #16c9ff;
+  opacity:.9;
+  pointer-events:none;
+}
+body.reference-home .reference-hotspots a.hotspot::after{
+  content:attr(aria-label);
+  position:absolute;
+  left:9px;top:27px;
+  max-width:min(220px,80vw);
+  padding:7px 10px;
+  border:1px solid rgba(92,221,255,.7);
+  border-radius:6px;
+  background:rgba(1,17,31,.94);
+  color:#effaff;
+  font:700 11px/1.3 Inter,Arial,sans-serif;
+  letter-spacing:.2px;
+  white-space:normal;
+  box-shadow:0 8px 22px #0008,0 0 14px #0aa9e455;
+  opacity:0;
+  transform:translateY(4px);
+  transition:opacity .18s ease,transform .18s ease;
+  pointer-events:none;
+}
+body.reference-home .reference-hotspots a.hotspot:hover,
+body.reference-home .reference-hotspots a.hotspot:focus-visible{
+  background:rgba(22,201,255,.13)!important;
+  border-color:rgba(92,221,255,.85)!important;
+  box-shadow:inset 0 0 0 1px rgba(92,221,255,.18),0 0 18px rgba(22,201,255,.12);
+}
+body.reference-home .reference-hotspots a.hotspot:hover::after,
+body.reference-home .reference-hotspots a.hotspot:focus-visible::after{
+  opacity:1;transform:translateY(0);
+}
+body.reference-home .real-menu-links a{min-height:44px}
+body.reference-home .real-menu-links a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media(max-width:700px){
+  body.reference-home .reference-hotspots a.hotspot::before{width:9px;height:9px;top:5px;left:5px}
+  body.reference-home .reference-hotspots a.hotspot::after{font-size:10px;max-width:145px;top:20px;left:5px}
+  body.reference-home .reference-hotspots a.hotspot:active{background:rgba(22,201,255,.22)!important}
+  body.reference-home .real-menu-links a{min-height:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.reference-home .reference-hotspots a.hotspot,
+  body.reference-home .reference-hotspots a.hotspot::after{transition:none}
+}
