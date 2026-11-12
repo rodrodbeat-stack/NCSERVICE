@@ -285,3 +285,70 @@ body.reference-home .real-menu-links a:focus-visible{
 @media(prefers-reduced-motion:reduce){
   body.reference-home .reference-hotspots a.hotspot::before{animation:none}
 }
+
+
+/* NCSERVICE // UNIFIED PREMIUM DESIGN SYSTEM — todas las páginas interiores */
+body:not(.reference-home) main.wrap{position:relative}
+body:not(.reference-home) .page-title{padding:18px 4px 24px}
+body:not(.reference-home) .page-title h1{
+  font-size:clamp(30px,4vw,42px);
+  letter-spacing:1.4px;
+  background:linear-gradient(100deg,#f4fbff 0%,#9beaff 55%,#24bdf2 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 8px 28px rgba(0,160,230,.12);
+}
+body:not(.reference-home) .page-title p{font-size:15px;color:#b8d8e9}
+body:not(.reference-home) .photo-banner{
+  border-radius:26px;
+  border:1px solid rgba(66,210,255,.72);
+  box-shadow:0 18px 48px rgba(0,0,0,.48),0 0 30px rgba(0,174,255,.18),inset 0 1px rgba(255,255,255,.12);
+}
+body:not(.reference-home) .photo-banner:before{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(135deg,rgba(74,216,255,.16),transparent 28%,transparent 72%,rgba(0,151,220,.12));
+}
+body:not(.reference-home) .photo-banner:after{border-radius:inherit}
+body:not(.reference-home) .photo-banner .button,
+body:not(.reference-home) .nav-cta,
+body:not(.reference-home) .button{
+  border-radius:999px;clip-path:none;padding:13px 24px;
+  border:1px solid rgba(151,235,255,.9);
+  background:linear-gradient(110deg,#087fc2,#12bceF 62%,#39d5ff);
+  color:#fff;box-shadow:0 8px 24px rgba(0,151,220,.2),inset 0 1px rgba(255,255,255,.22);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+body:not(.reference-home) .nav-cta:hover,
+body:not(.reference-home) .button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,174,255,.32);filter:brightness(1.08)}
+body:not(.reference-home) .card,
+body:not(.reference-home) .tile,
+body:not(.reference-home) .bluebox,
+body:not(.reference-home) .people-feature{
+  border-radius:20px;border-color:rgba(57,190,245,.42);
+  box-shadow:0 16px 38px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.055);
+}
+body:not(.reference-home) .tile{
+  background:linear-gradient(145deg,rgba(8,48,76,.96),rgba(3,20,36,.98));
+  padding:25px;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+body:not(.reference-home) .tile:hover{
+  transform:translateY(-4px);border-color:rgba(72,218,255,.85);
+  box-shadow:0 16px 34px rgba(0,0,0,.34),0 0 22px rgba(0,174,255,.13);
+}
+body:not(.reference-home) .tile:before{border-radius:99px;width:54px;height:3px}
+body:not(.reference-home) .people-feature{overflow:hidden;padding:14px;gap:22px}
+body:not(.reference-home) .people-feature img{border-radius:14px}
+body:not(.reference-home) .bluebox{background:linear-gradient(135deg,rgba(7,57,87,.96),rgba(2,20,36,.98))}
+body:not(.reference-home) .content h2{color:#eaf8ff}
+body:not(.reference-home) .links a.active{color:#fff}
+body:not(.reference-home) footer{border-top:1px solid rgba(57,190,245,.4);background:linear-gradient(90deg,#010b14,#031a2b,#010b14)}
+body:not(.reference-home) .menu{border-radius:12px;color:#bcefff;border-color:rgba(65,202,255,.55)}
+@media(max-width:760px){
+ body:not(.reference-home) .page-title{padding:12px 2px 20px}
+ body:not(.reference-home) .photo-banner{border-radius:20px}
+ body:not(.reference-home) .card,body:not(.reference-home) .tile,body:not(.reference-home) .bluebox,body:not(.reference-home) .people-feature{border-radius:17px}
+ body:not(.reference-home) .people-feature{padding:10px;gap:12px}
+ body:not(.reference-home) .people-feature img{border-radius:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ body:not(.reference-home) .tile,body:not(.reference-home) .button,body:not(.reference-home) .nav-cta{transition:none}
+}
