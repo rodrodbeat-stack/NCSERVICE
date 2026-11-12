@@ -190,3 +190,30 @@ body.reference-home .real-menu-links a:focus-visible{outline:3px solid #fff;outl
   body.reference-home .reference-hotspots a.hotspot,
   body.reference-home .reference-hotspots a.hotspot::after{transition:none}
 }
+
+
+/* FIX ANDROID: asegurar recepción de toques en toda la capa de enlaces */
+body.reference-home .reference-hotspots{
+  pointer-events:auto!important;
+  z-index:2147483000!important;
+  touch-action:pan-y!important;
+}
+body.reference-home .reference-hotspots a.hotspot{
+  pointer-events:auto!important;
+  z-index:2147483001!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:rgba(22,201,255,.28);
+  cursor:pointer!important;
+}
+body.reference-home .real-menu-links{
+  z-index:2147483002!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+}
+body.reference-home .real-menu-links a{
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:rgba(22,201,255,.35);
+  position:relative;
+  z-index:2147483003!important;
+}
