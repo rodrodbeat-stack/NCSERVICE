@@ -217,3 +217,71 @@ body.reference-home .real-menu-links a{
   position:relative;
   z-index:2147483003!important;
 }
+
+
+/* NCSERVICE // SIGNATURE EXPERIENCE — cinematic finish */
+body.reference-home{
+  min-height:100vh;
+  padding:clamp(8px,2.2vw,30px);
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(0,174,255,.22),transparent 48%),
+    radial-gradient(ellipse at 50% 100%,rgba(0,91,150,.18),transparent 45%),
+    #010711;
+}
+body.reference-home:after{
+  content:"";
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.18),transparent 12%,transparent 88%,rgba(0,0,0,.25)),
+    repeating-linear-gradient(0deg,transparent 0 3px,rgba(90,210,255,.018) 4px);
+  opacity:.8;
+}
+body.reference-home .reference-stage{
+  width:min(1536px,100%);
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  border:1px solid rgba(73,213,255,.62);
+  border-radius:5px;
+  background:#03111e;
+  box-shadow:
+    0 0 0 1px rgba(8,95,145,.45),
+    0 20px 65px rgba(0,0,0,.72),
+    0 0 38px rgba(0,174,255,.22),
+    inset 0 0 30px rgba(0,174,255,.08);
+}
+body.reference-home .reference-stage:before{
+  content:"";
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:
+    linear-gradient(135deg,rgba(80,220,255,.12),transparent 18%,transparent 82%,rgba(80,220,255,.08)),
+    linear-gradient(90deg,rgba(0,10,22,.12),transparent 8%,transparent 92%,rgba(0,10,22,.12));
+  box-shadow:inset 0 0 0 1px rgba(180,240,255,.13),inset 0 0 70px rgba(0,12,30,.12);
+}
+body.reference-home .reference-image{
+  display:block;width:100%;height:auto;
+  filter:saturate(1.04) contrast(1.025);
+}
+body.reference-home .reference-hotspots a.hotspot::before{
+  animation:ncservice-pulse 2.6s ease-in-out infinite;
+}
+body.reference-home .real-menu-links a{
+  text-shadow:0 1px 5px #00101e,0 0 12px rgba(30,195,255,.38);
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease;
+}
+body.reference-home .real-menu-links a:hover,
+body.reference-home .real-menu-links a:focus-visible{
+  box-shadow:inset 0 0 22px rgba(22,201,255,.22),0 0 18px rgba(22,201,255,.28);
+}
+@keyframes ncservice-pulse{
+  0%,100%{box-shadow:0 0 0 3px rgba(22,201,255,.14),0 0 10px #16c9ff;transform:scale(.94)}
+  50%{box-shadow:0 0 0 7px rgba(22,201,255,.05),0 0 20px #16c9ff;transform:scale(1.08)}
+}
+@media(max-width:700px){
+  body.reference-home{padding:0;background:#010711}
+  body.reference-home .reference-stage{border-left:0;border-right:0;border-radius:0;box-shadow:0 0 24px rgba(0,174,255,.2)}
+}
+@media(prefers-reduced-motion:reduce){
+  body.reference-home .reference-hotspots a.hotspot::before{animation:none}
+}
