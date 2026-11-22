@@ -102,6 +102,16 @@ body.nc-premium-home{margin:0;background:#010d19;color:#eaf4fb}
   <a class="premium-video" href="nosotros.html" aria-label="Conoce nuestra empresa"><span class="premium-video-caption"><b>NCSERVICE</b><small>Conoce nuestra forma de trabajar ↗</small></span></a>
  </section>
  <section class="premium-bottom"><div><div class="live-kicker">NUESTRA MIRADA</div><h2>Personas primero. Procesos con propósito.</h2><p>Reclutamiento · Administración · Remuneraciones · Soporte</p></div><a class="nc-home-cta" href="contacto.html">Conversemos ↗</a></section>
+
+ <section class="nc-interactive" aria-labelledby="nc-interactive-title">
+  <div class="nc-interactive-intro"><div class="live-kicker">ASÍ TE ACOMPAÑAMOS</div><h2 id="nc-interactive-title">Una gestión clara, <em>de principio a fin.</em></h2><p>Explora cada etapa para conocer cómo podemos apoyar a tu organización.</p></div>
+  <div class="nc-accordion">
+   <details open><summary><span>01</span> Diagnóstico y planificación</summary><p>Levantamos tus necesidades, perfiles y prioridades para definir un alcance de servicio claro y coordinado.</p></details>
+   <details><summary><span>02</span> Gestión y coordinación</summary><p>Apoyamos los procesos acordados de reclutamiento, incorporación y administración de personas.</p></details>
+   <details><summary><span>03</span> Seguimiento y soporte</summary><p>Mantenemos una coordinación cercana para atender requerimientos y acompañar el ciclo laboral.</p></details>
+  </div>
+  <a class="nc-home-cta" href="contacto.html">Solicitar una conversación ↗</a>
+ </section>
 </main>
 <footer class="live-footer"><div class="live-footer-inner"><b>NCSERVICE</b><span>Gestión de personas · Capital humano</span><span>© <span id="year"></span> NCSERVICE. Todos los derechos reservados.</span><a href="contacto.html">Contacto</a></div></footer>
 <script>
@@ -120,6 +130,15 @@ body.nc-premium-home{margin:0;background:#010d19;color:#eaf4fb}
  dots.forEach((d,n)=>d.addEventListener('click',()=>{show(n);start()}));
  const hero=document.querySelector('.premium-hero');hero.addEventListener('mouseenter',stop);hero.addEventListener('mouseleave',start);document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
  show(0);start();
+ // Interacciones complementarias: no modifican el hero ni su composición.
+ const progress=document.createElement('div');progress.className='nc-scroll-progress';progress.setAttribute('aria-hidden','true');document.body.appendChild(progress);
+ const topButton=document.createElement('button');topButton.className='nc-back-top';topButton.type='button';topButton.setAttribute('aria-label','Volver al inicio');topButton.textContent='↑';document.body.appendChild(topButton);
+ const updateScroll=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform='scaleX('+(max>0?scrollY/max:0)+')';topButton.classList.toggle('visible',scrollY>420)};
+ addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+ topButton.addEventListener('click',()=>scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ const revealTargets=document.querySelectorAll('.premium-service-ribbon a,.premium-commit-copy,.premium-commit-photo,.premium-proof,.premium-video,.premium-bottom,.nc-interactive');
+ if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('nc-in-view');observer.unobserve(entry.target)}}),{threshold:.12});revealTargets.forEach(el=>{el.classList.add('nc-reveal');observer.observe(el)})}
+
 })();
 </script>
 </body>
